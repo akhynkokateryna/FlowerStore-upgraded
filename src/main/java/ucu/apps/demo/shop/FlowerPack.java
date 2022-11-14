@@ -3,9 +3,10 @@ package ucu.apps.demo.shop;
 import lombok.Getter;
 import lombok.Setter;
 import ucu.apps.demo.flower.Flower;
+import ucu.apps.demo.item.Item;
 
 @Setter@Getter
-public class FlowerPack extends Bundle {
+public class FlowerPack extends Item {
     private Flower flower;
     private int amount;
 
@@ -14,7 +15,7 @@ public class FlowerPack extends Bundle {
         this.amount = amount;
     }
 
-    public double getPrice() {
+    public double price() {
         return amount * flower.getPrice();
     }
 }

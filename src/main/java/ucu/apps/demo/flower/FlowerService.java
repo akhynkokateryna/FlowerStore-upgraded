@@ -7,6 +7,7 @@ import java.util.List;
 @Service
 public class FlowerService {
     public List <Flower> getFlowers() {
-        return List.of(new Flower());
+        return List.of(new Flower(7, FlowerColor.BLUE, 80, FlowerType.TULIP),
+                new Flower(5, FlowerColor.WHITE, 20, FlowerType.CHAMOMILE));
     }
 }

@@ -1,5 +1,5 @@
 package ucu.apps.demo.payments;
 
 public interface Payment {
-    boolean pay();
+    boolean pay(double price);
 }

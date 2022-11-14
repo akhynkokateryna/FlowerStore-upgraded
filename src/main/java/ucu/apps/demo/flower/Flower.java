@@ -1,11 +1,16 @@
 package ucu.apps.demo.flower;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import ucu.apps.demo.item.Item;
 
-
+@NoArgsConstructor
+@Getter
 @Setter
-public class Flower {
+@AllArgsConstructor
+public class Flower extends Item {
     @Getter
     private double sepalLength;
     private FlowerColor color;
@@ -14,11 +19,8 @@ public class Flower {
     @Getter
     private FlowerType flowerType;
 
-    public String getColor() {
-        return color.toString();
-    }
-
-    public double getPrice() {
+    @Override
+    public double price() {
         return price;
     }
 }

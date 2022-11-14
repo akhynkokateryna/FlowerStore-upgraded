@@ -1,5 +1,7 @@
 package ucu.apps.demo.shop;
 
+import ucu.apps.demo.item.Item;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +13,7 @@ public class Store {
         flowBuckets.add(flowerBucket);
     }
 
-    public boolean search(Bundle toSearch) {
+    public boolean search(Item toSearch) {
         if (toSearch instanceof FlowerBucket) {
             for (FlowerBucket bucket : flowBuckets) {
                 if (bucket.equals(toSearch)) {
