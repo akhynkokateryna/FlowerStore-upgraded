@@ -3,7 +3,7 @@ package ucu.apps.demo.order;
 import lombok.Getter;
 import lombok.Setter;
 import ucu.apps.demo.delivery.Delivery;
-import ucu.apps.demo.item.Item;
+import ucu.apps.demo.flower.Item;
 import ucu.apps.demo.payments.Payment;
 
 import java.util.List;

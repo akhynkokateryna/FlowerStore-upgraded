@@ -4,19 +4,21 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ucu.apps.demo.item.Item;
+
+import javax.persistence.*;
 
 @NoArgsConstructor
 @Getter
 @Setter
 @AllArgsConstructor
+@Table
+@Entity
 public class Flower extends Item {
-    @Getter
+    @Id @GeneratedValue
+    private int id;
     private double sepalLength;
     private FlowerColor color;
-
     private double price;
-    @Getter
     private FlowerType flowerType;
 
     @Override

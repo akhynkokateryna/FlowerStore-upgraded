@@ -1,13 +1,24 @@
 package ucu.apps.demo.flower;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class FlowerService {
+    @Autowired
+    private final FlowerRepository flowerRepository;
+
+    public FlowerService(FlowerRepository flowerRepository) {
+        this.flowerRepository = flowerRepository;
+    }
+
     public List <Flower> getFlowers() {
-        return List.of(new Flower(7, FlowerColor.BLUE, 80, FlowerType.TULIP),
-                new Flower(5, FlowerColor.WHITE, 20, FlowerType.CHAMOMILE));
+        return flowerRepository.findAll();
+    }
+
+    public void addFlower(Flower flower) {
+        flowerRepository.save(flower);
     }
 }

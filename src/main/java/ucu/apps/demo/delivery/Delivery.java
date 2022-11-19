@@ -1,6 +1,6 @@
 package ucu.apps.demo.delivery;
 
-import ucu.apps.demo.item.Item;
+import ucu.apps.demo.flower.Item;
 
 import java.util.List;
 

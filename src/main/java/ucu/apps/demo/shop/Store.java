@@ -1,6 +1,6 @@
 package ucu.apps.demo.shop;
 
-import ucu.apps.demo.item.Item;
+import ucu.apps.demo.flower.Item;
 
 import java.util.ArrayList;
 import java.util.List;

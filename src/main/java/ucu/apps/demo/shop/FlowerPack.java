@@ -3,7 +3,7 @@ package ucu.apps.demo.shop;
 import lombok.Getter;
 import lombok.Setter;
 import ucu.apps.demo.flower.Flower;
-import ucu.apps.demo.item.Item;
+import ucu.apps.demo.flower.Item;
 
 @Setter@Getter
 public class FlowerPack extends Item {

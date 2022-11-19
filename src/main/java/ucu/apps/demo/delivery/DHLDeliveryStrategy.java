@@ -2,7 +2,7 @@ package ucu.apps.demo.delivery;
 
 import lombok.Getter;
 import lombok.Setter;
-import ucu.apps.demo.item.Item;
+import ucu.apps.demo.flower.Item;
 
 import java.util.List;
 
