@@ -1,7 +1,7 @@
-GET http://localhost:8080/api/flowers
+GET https://vast-springs-99063.herokuapp.com/api/flowers
 
 ###
-POST http://localhost:8080/api/flowers
+POST https://vast-springs-99063.herokuapp.com/api/flowers
 Content-Type: application/json
 
 {
