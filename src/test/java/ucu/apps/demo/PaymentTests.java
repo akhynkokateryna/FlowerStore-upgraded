@@ -1,28 +1,32 @@
 package ucu.apps.demo;
 
 
-class PaymentTests {
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import ucu.apps.demo.payments.CreditCardPaymentStrategy;
+import ucu.apps.demo.payments.PayPalPaymentStrategy;
 
-//    private static final Random RANDOM_GENERATOR = new Random();
-//    private static final int MAX_PRICE = 100;
-//    private Flower flower;
-//
-//    @BeforeEach
-//    public void init() {
-//        flower = new Flower();
-//    }
-//
-//    @Test
-//    public void testPrice() {
-//        int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-//        flower.setPrice(price);
-//        Assertions.assertEquals(price, flower.getPrice());
-//    }
-//
-//    @Test
-//    public void testColor() {
-//        FlowerColor color = FlowerColor.RED;
-//        flower.setColor(color);
-//        Assertions.assertEquals("#FF0000", flower.getColor());
-//    }
+class PaymentTests {
+    private final CreditCardPaymentStrategy creditCardPaymentStrategy = new CreditCardPaymentStrategy();
+    private final PayPalPaymentStrategy payPalPaymentStrategy = new PayPalPaymentStrategy();
+
+    @Test
+    public void testName(){
+        Assertions.assertEquals(creditCardPaymentStrategy.getName(), "Credit card");
+        Assertions.assertEquals(payPalPaymentStrategy.getName(), "PayPal");
+    }
+
+    @Test
+    public void testDescription(){
+        Assertions.assertEquals(creditCardPaymentStrategy.getDescription(), "Credit card payment");
+        Assertions.assertEquals(payPalPaymentStrategy.getDescription(), "PayPal payment");
+    }
+
+    public void testPrice(){
+        Assertions.assertEquals(creditCardPaymentStrategy.pay(100), "True");
+        Assertions.assertEquals(payPalPaymentStrategy.pay(150), "True");
+        Assertions.assertEquals(creditCardPaymentStrategy.pay(-5), "False");
+        Assertions.assertEquals(payPalPaymentStrategy.pay(-10), "False");
+    }
+
 }

@@ -3,8 +3,7 @@ package ucu.apps.demo.decorators;
 import ucu.apps.demo.flower.Item;
 
 public class BasketDecorator extends Item{
-    private Item item;
-
+    private final Item item;
     public BasketDecorator(Item item) {
         this.item = item;
     }
