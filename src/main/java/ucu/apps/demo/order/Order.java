@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import ucu.apps.demo.delivery.Delivery;
 import ucu.apps.demo.flower.Item;
+import ucu.apps.demo.observer.Status;
 import ucu.apps.demo.payments.Payment;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 public class Order {
+    private Status status = Status.INPROCESS;
     private List<Item> items;
     private Payment payment;
     private Delivery delivery;
